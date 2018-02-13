@@ -1,4 +1,4 @@
-# Islandora PDF.js [![Build Status](https://travis-ci.org/Islandora/islandora_pdfjs.png?branch=7.x)](https://travis-ci.org/islandora/islandora_pdfjs)
+# Islandora PDF.js
 
 ## Introduction
 
@@ -24,12 +24,6 @@ Currently the PDF.js viewer can be used as the viewer for:
 
 * the [PDF Solution Pack](https://github.com/Islandora/islandora_solution_pack_pdf) 
   * Administration » Islandora » Solution pack configuration » PDF Solution Pack (admin/islandora/solution_pack_config/pdf).
-* the [Book Solution Pack](https://github.com/Islandora/islandora_solution_pack_book) (both the book and the page object are options)
-  * Administration » Islandora » Solution pack configuration » Book Solution Pack (admin/islandora/solution_pack_config/book). 
-* the [Newspaper Solution Pack](https://github.com/Islandora/islandora_solution_pack_newspaper) (both the issue and the page object are options)
-  * Administration » Islandora » Solution pack configuration » Newspaper (admin/islandora/solution_pack_config/newspaper). 
-* [Scholar](https://github.com/Islandora/islandora_scholar) 
-  * Administration » Islandora » Solution pack configuration » Scholar (admin/islandora/solution_pack_config/scholar). 
 
 ## Documentation
 
@@ -37,16 +31,27 @@ Further documentation for this module is available at [our wiki](https://wiki.du
 
 ## Troubleshooting/Issues
 
-Having problems or solved a problem? Check out the Islandora google groups for a solution.
+Having problems or solved one? Create an issue, check out the Islandora Google
+groups.
 
-* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora)
-* [Islandora Dev Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
+* [Users](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora)
+* [Devs](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
+
+or contact [discoverygarden](http://support.discoverygarden.ca).
 
 ## Maintainers/Sponsors
 
 Current maintainers:
 
-* [Nelson Hart](https://github.com/nhart)
+* [discoverygarden](http://www.discoverygarden.ca)
+
+## Development
+
+If you would like to contribute to this module, please check out the helpful
+[Documentation](https://github.com/Islandora/islandora/wiki#wiki-documentation-for-developers),
+[Developers](http://islandora.ca/developers) section on Islandora.ca and create
+an issue, pull request and or contact
+[discoverygarden](http://support.discoverygarden.ca).
 
 ## Development
 
@@ -55,6 +60,5 @@ If you would like to contribute to this module, please check out [CONTRIBUTING.m
 ## License
 
 [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
-
 
 **Note** This module requires PDF.js. PDF.js is licensed under an [Apache2 License](https://github.com/mozilla/pdf.js/blob/master/LICENSE)

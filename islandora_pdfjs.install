@@ -5,26 +5,24 @@
  * Install hooks for this module.
  */
 
+use Drupal\Core\Link;
+
 /**
  * Implements hook_requirements().
  */
 function islandora_pdfjs_reader_requirements() {
-  $requirements = array();
+  $requirements = [];
   // Ensure translations don't break at install time.
   $t = 't';
   if (!function_exists('libraries_get_libraries')) {
-    module_enable(array('libraries'));
+    \Drupal::service('module_installer')->install(['libraries']);
   }
   if (!in_array('pdfjs', array_keys(libraries_get_libraries()))) {
-    // @FIXME
-// l() expects a Url object, created from a route name or external URI.
-// $readme_link = l($t('README'), drupal_get_path('module', 'islandora_pdfjs') . '/README.txt');
-
-    $requirements['pdfjs'] = array(
+    $requirements['pdfjs'] = [
       'title' => $t('pdf.js library'),
-      'description' => $t('pdf.js library missing; please consult the !readme for installation instructions.', array('!readme' => $readme_link)),
+      'description' => $t('pdf.js library missing; please consult the module README.md for installation instructions.'),
       'severity' => REQUIREMENT_ERROR,
-    );
+    ];
   }
   return $requirements;
 }

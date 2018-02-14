@@ -8,7 +8,7 @@
 /**
  * Implements hook_requirements().
  */
-function islandora_pdfjs_reader_requirements() {
+function islandora_pdfjs_requirements() {
   $requirements = [];
   // Ensure translations don't break at install time.
   $t = 't';

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * drush integration for islandora_pdfjs.
+ * Drush integration for islandora_pdfjs.
  */
 
 /**
@@ -12,7 +12,7 @@ define('PDFJS_DOWNLOAD_URI', 'https://github.com/mozilla/pdf.js/releases/downloa
 
 
 /**
- * The initial PDF.js directory
+ * The initial PDF.js directory.
  */
 define('PDFJS_ORIGINAL_DIR', 'pdfjs');
 
@@ -20,17 +20,17 @@ define('PDFJS_ORIGINAL_DIR', 'pdfjs');
  * Implements hook_drush_command().
  */
 function islandora_pdfjs_drush_command() {
-  $items = array();
+  $items = [];
   // The key in the $items array is the name of the command.
-  $items['pdfjs-plugin'] = array(
+  $items['pdfjs-plugin'] = [
     'callback' => 'drush_islandora_pdfjs_plugin',
     'description' => dt('Download and install the PDF.js plugin.'),
     'bootstrap' => DRUSH_BOOTSTRAP_DRUSH,
-    'arguments' => array(
+    'arguments' => [
       'path' => dt('Optional. A path where to install the PDF.js plugin. If omitted Drush will use the default location.'),
-    ),
-    'aliases' => array('pdfjsplugin'),
-  );
+    ],
+    'aliases' => ['pdfjsplugin'],
+  ];
 
   return $items;
 }
@@ -60,7 +60,7 @@ function drush_islandora_pdfjs_plugin() {
   // Create the path if it does not exist.
   if (!is_dir($path)) {
     drush_op('mkdir', $path);
-    drush_log(dt('Directory @path was created', array('@path' => $path)), 'notice');
+    drush_log(dt('Directory @path was created', ['@path' => $path]), 'notice');
   }
 
   // Set the directory to the download location.
@@ -77,7 +77,7 @@ function drush_islandora_pdfjs_plugin() {
     if (is_dir($dirname) || is_dir('pdfjs')) {
       drush_delete_dir($dirname, TRUE);
       drush_delete_dir('pdfjs', TRUE);
-      drush_log(dt('A existing PDF.js plugin was deleted from @path', array('@path' => $path)), 'notice');
+      drush_log(dt('A existing PDF.js plugin was deleted from @path', ['@path' => $path]), 'notice');
     }
 
     // Decompress the zip archive.
@@ -91,10 +91,10 @@ function drush_islandora_pdfjs_plugin() {
   }
 
   if (is_dir($dirname)) {
-    drush_log(dt('PDF.js plugin has been installed in @path', array('@path' => $path)), 'success');
+    drush_log(dt('PDF.js plugin has been installed in @path', ['@path' => $path]), 'success');
   }
   else {
-    drush_log(dt('Drush was unable to install the PDF.js plugin to @path', array('@path' => $path)), 'error');
+    drush_log(dt('Drush was unable to install the PDF.js plugin to @path', ['@path' => $path]), 'error');
   }
 
   // Set working directory back to the previous working directory.

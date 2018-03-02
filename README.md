@@ -6,7 +6,7 @@ An Islandora viewer using [Mozilla PDF.js](http://mozilla.github.io/pdf.js/).
 
 ## Requirements
 
-* [Islandora](https://github.com/islandora/islandora)
+* [Islandora](https://github.com/discoverygarden/islandora)
 * [Tuque](https://github.com/islandora/tuque)
 * [PDF.js](http://mozilla.github.io/pdf.js/)
 

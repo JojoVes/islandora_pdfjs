@@ -125,8 +125,8 @@ function islandora_pdfjs_islandora_pagecmodel_islandora_solr_object_result_alter
   $viewer_id = islandora_get_viewer_id('islandora_book_viewers');
   if ($viewer_id == 'islandora_pdfjs') {
     // Grab the names of the appropriate solr fields from the db.
-    $parent_book_field_name = \Drupal::config('islandora_book.settings')->get('islandora_book_parent_book_solr_field', 'RELS_EXT_isMemberOf_uri_ms');
-    $page_number_field_name = \Drupal::config('islandora_paged_content.settings')->get('islandora_paged_content_page_number_solr_field', 'RELS_EXT_isSequenceNumber_literal_ms');
+    $parent_book_field_name = \Drupal::config('islandora_book.settings')->get('islandora_book_parent_book_solr_field');
+    $page_number_field_name = \Drupal::config('islandora_paged_content.settings')->get('islandora_paged_content_sequence_number_field');
     // If:
     // there's an object url AND
     // there's a solr doc AND

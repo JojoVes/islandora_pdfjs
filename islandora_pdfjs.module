@@ -5,6 +5,8 @@
  * Defines all the hooks this module implements.
  */
 
+use Drupal\Core\Url;
+
 /**
  * Implements hook_theme().
  */
@@ -144,7 +146,7 @@ function islandora_pdfjs_islandora_pagecmodel_islandora_solr_object_result_alter
       $page_number = $search_results['solr_doc'][$page_number_field_name][0];
 
       if (islandora_object_access(ISLANDORA_VIEW_OBJECTS, islandora_object_load($book_pid))) {
-        $search_results['object_url'] = "islandora/object/$book_pid";
+        $search_results['object_url'] = Url::fromRoute('islandora.view_object', ['object' => $book_pid], ['absolute' => TRUE])->toString();
         $search_results['object_url_params']['page'] = $page_number;
       }
     }

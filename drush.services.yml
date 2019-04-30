@@ -1,0 +1,8 @@
+services:
+  islandora_pdfjs.commands:
+    class: \Drupal\islandora_pdfjs\Commands\IslandoraPdfjsCommands
+    tags:
+      - name: drush.command
+    arguments:
+      - '@file_system'
+      - '@plugin.manager.archiver'

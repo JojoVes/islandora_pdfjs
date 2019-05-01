@@ -51,9 +51,8 @@ class IslandoraPdfjsCommands extends AbstractPluginAcquisition {
    * @command islandora_pdfjs:plugin
    * @aliases pdfjsplugin,pdfjs-plugin
    */
-  public function plugin($path = NULL) {
-    return parent::plugin($path);
+  public function installPlugin($path = NULL) {
+    return $this->plugin($path);
   }
 
 }
-
